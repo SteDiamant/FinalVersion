@@ -4,6 +4,18 @@ import numpy as np
 from Daily_Count import main as daily_count
 from logInPage import main as authenticate
 from Daily_Count import show_external_puchases,show_kassastrook,show_card_payments,show_gift_cards,show_vault_cash,show_invoice
+
+st.set_page_config(
+    page_title="Sam-Sam App",
+    page_icon="imgs\logo.png",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
 def sidebar_menu():
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Choose a page", ["Home", "Daily Count"])
