@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import datetime
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
 from database import *
 import sqlite3
 def show_card_payments():
