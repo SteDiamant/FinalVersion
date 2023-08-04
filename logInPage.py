@@ -2,14 +2,14 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 import streamlit as st
-
+import json
 def reset_password(authenticator, username, config):
     with st.sidebar.expander('Reset password'):
             try:
                 if authenticator.reset_password(username, 'Reset password'):
                     st.success('Password modified successfully')
-                    with open('config.yaml', 'w') as file:
-                        yaml.dump(config, file, default_flow_style=False)
+                    with open('config.json', 'w') as file:
+                        json.dump(config, file)
             except Exception as e:
                 st.error(e)
 def create_user(authenticator, config):
@@ -17,8 +17,8 @@ def create_user(authenticator, config):
             try:
                 if authenticator.register_user('Register user', preauthorization=False):
                     st.success('User registered successfully')
-                    with open('config.yaml', 'w') as file:
-                        yaml.dump(config, file, default_flow_style=False)
+                    with open('config.json', 'w') as file:
+                        json.dump(config, file)
             except Exception as e:
                 st.error(e)
 def logout(authenticator):
@@ -29,8 +29,8 @@ def create_user(authenticator, config):
             try:
                 if authenticator.register_user('Register user', preauthorization=False):
                     st.success('User registered successfully')
-                    with open('config.yaml', 'w') as file:
-                        yaml.dump(config, file, default_flow_style=False)
+                    with open('config.json', 'w') as file:
+                        json.dump(config, file)
             except Exception as e:
                 st.error(e)
 def forgot_password(authenticator, config):
@@ -38,8 +38,8 @@ def forgot_password(authenticator, config):
             try:
                 if authenticator.forgot_password('Forgot password'):
                     st.success('Password reset successfully')
-                    with open('config.yaml', 'w') as file:
-                        yaml.dump(config, file, default_flow_style=False)
+                    with open('config.json', 'w') as file:
+                        json.dump(config, file)
             except Exception as e:
                 st.error(e)
 def update_user_details(authenticator, username, config):
@@ -47,15 +47,15 @@ def update_user_details(authenticator, username, config):
             try:
                 if authenticator.update_user_details(username, 'Update user details'):
                     st.success('Entries updated successfully')
-                    with open('config.yaml', 'w') as file:
-                        yaml.dump(config, file, default_flow_style=False)
+                    with open('config.json', 'w') as file:
+                        json.dump(config, file)
             except Exception as e:
                 st.error(e)
 
 
 def main():
-    with open('config.yaml') as file:
-        config = yaml.load(file, Loader=SafeLoader)
+    with open('config.json') as file:
+        config = json.load(file)
 
     authenticator = stauth.Authenticate(
         config['credentials'],
