@@ -1,0 +1,21 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    bas:
+      email: bar@gmail.com
+      name: Rebecca Briggs
+      password: $2b$12$PC32S6Il85kf6aHLJBt5MOs1tN95ANbhthaLud/2uR5T8G3XSVSbW
+    stelios:
+      email: stdiamant@gmail.com
+      name: Test
+      password: $2b$12$PK.bWURSPbwU4oArXRNJ/.J5zEiTiBj/yC2YWgvCpDR215RkjRxvK
+    v:
+      email: VeraWelker@gmail.com
+      name: Vera Welker
+      password: $2b$12$RyoT4NGmRcjJT9VYO73O2.FbzjhYi3Sgv4Yqmnf1NQPov7c6KEAZ.
+preauthorized:
+  emails:
+  - melsby@gmail.com
