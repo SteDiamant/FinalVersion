@@ -1,0 +1,120 @@
+/* Form container styles */
+.form-container {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px; /* Adjust the max-width to your desired size */
+}
+#form1 h2 {
+            text-align: center; /* Center the "Kasopmaak" heading in the middle of the form header */
+        }
+/* Form styles */
+form {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px; /* Adjust the padding to make the form smaller */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 75%; /* Adjust the width to take 75% of the width of the form container */
+    margin: 0 auto; /* Center the input element horizontally */
+    padding: 8px; /* Adjust the padding to make the input fields smaller */
+    border: 1px solid #dcdcdc;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    font-size: 14px; /* Adjust the font size to make it smaller */
+}
+
+input[type="text"].filled {
+    background-color: #89CFF0;
+    transition: background-color 0.5s; /* Transition duration */
+}
+
+input[type="submit"],
+button {
+    width: 100%; /* Adjust the width to take the full width of the form container */
+    background-color: #007aff;
+    color: #ffffff;
+    padding: 10px; /* Adjust the padding to make the buttons smaller */
+    border: none;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    cursor: pointer;
+    font-size: 14px; /* Adjust the font size to make it smaller */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Table header styles */
+table th#head_1 {
+    padding: 8px;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    background-color: white; /* Lighter blue color for header 1 */
+    color: black; /* White text color for header 1 */
+    text-align: left; 
+}
+
+table th#head_2 {
+    padding: 8px;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    background-color: white; /* Lighter red color for header 2 */
+    color: black; /* White text color for header 2 */
+    text-align: left;
+}
+
+table th#head_3 {
+    padding: 8px;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    background-color: white; /* Lighter green color for header 3 */
+    color: black;; /* White text color for header 3 */
+    text-align: left;
+}
+
+/* Table data cell styles */
+table td {
+    padding: 8px;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    border: 1px solid #dcdcdc;
+}
+
+/* Specific style for table data cell with ID "head2" */
+#head2 {
+    font-weight: bold;
+    position: center;
+}
+
+/* Specific style for table data cells with "item_" IDs */
+[id^="item_"] {
+    font-weight: bold; /* Make the text bold for all cells with "item_" IDs */
+    color: black; /* Set the text color to blue for all cells with "item_" IDs */
+    cursor: pointer; /* Change cursor to pointer for better user interaction */
+}
+
+/* Specific style for table data cells with "item_" IDs on hover */
+[id^="item_"]:hover {
+    background-color: #f2f2f2; /* Light gray background on hover */
+}
+
+[name^="amount_"]:hover {
+    background-color: #f2f2f2; /* Light gray background on hover */
+}
+.sumDisplay-widget {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

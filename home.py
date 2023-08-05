@@ -30,8 +30,39 @@ def sidebar_menu():
 
 def main():
     status=authenticate()
+    radio_style = """
+                        <style>
+                        /* Cutted edges effect */
+                        .radio-button input[type="radio"] + label {
+                        border-radius: 5px;
+                        border: 2px solid #4CAF50;
+                        padding: 10px;
+                        margin-right: 10px;
+                        }
+
+                        /* Highlight selected radio button */
+                        .radio-button input[type="radio"]:checked + label {
+                        background-color: #4CAF50;
+                        color: white;
+                        }
+
+                        /* Align text to the center of the label */
+                        .radio-button label {
+                        display: inline-block;
+                        text-align: center;
+                        }
+
+                        /* Remove outline on focus */
+                        .radio-button input[type="radio"]:focus + label {
+                        outline: none;
+                        }
+                        </style>
+                        """
+
+
     if status:
         sidebar_menu()
+        #st.markdown(radio_style, unsafe_allow_html=True)
         choice = st.radio("Choose Database to Interact With",['card_payments','gift_cards','invoices','vault_cash','kassastrook_data','external_purchase'],horizontal=True)
         if choice == 'card_payments':
             show_card_payments()

@@ -1,0 +1,47 @@
+/* Form container styles */
+.form-container {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px; /* Adjust the max-width to your desired size */
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px; /* Adjust the padding to make the form smaller */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="text"] {
+    width: 96%; /* Adjust the width to take 75% of the width of the form container */
+    margin: auto; /* Center the input element horizontally */
+    padding: 8px; /* Adjust the padding to make the input fields smaller */
+    border: 1px solid #dcdcdc;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    font-size: 14px; /* Adjust the font size to make it smaller */
+}
+input[type="text"].filled {
+  background-color: #89CFF0;
+  transition: background-color 0.5s; /* Transition duration */
+}
+
+input[type="submit"] {
+    width: 100%; /* Adjust the width to take the full width of the form container */
+    background-color: #007aff;
+    color: #ffffff;
+    padding: 10px; /* Adjust the padding to make the button smaller */
+    border: none;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+    cursor: pointer;
+    font-size: 14px; /* Adjust the font size to make it smaller */
+}
+
+/* Table header styles */
+table th {
+    /* background-color: #6bb0ff; /* Lighter blue color */
+     /*color: #ffffff;*/
+    padding: 8px;
+    border-radius: 10px; /* Adjust the border-radius for a rounded look */
+}
